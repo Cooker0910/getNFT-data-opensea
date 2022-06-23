@@ -6,5 +6,11 @@ const provider = new Web3.providers.HttpProvider('https://mainnet.infura.io')
 
 const openseaSDK = new OpenSeaSDK(provider, {
   networkName: Network.Main,
-  apiKey: YOUR_API_KEY
+  apiKey: process.env.YOUR_API_KEY
+})
+
+const { orders, count } = await openseaSDK.api.getOrders({
+  asset_contract_address: tokenAddress,
+  token_id: token_id,
+  side: "bid"
 })
