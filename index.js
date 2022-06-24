@@ -1,5 +1,5 @@
 import Web3 from 'web3'
-import { OpenSeaPort, OpenSeaSDK, Network } from 'opensea-js'
+import { OpenSeaPort, Network } from 'opensea-js'
 import 'dotenv/config';
 
 console.log('-------------------==========', Network.Main)
@@ -10,18 +10,13 @@ console.log('-------------------==========', Network.Main)
     networkName: Network.Main,
     apiKey: process.env.YOUR_API_KEY
   })
-
-  const openseaSDK = new OpenSeaSDK(provider, {
-    networkName: Network.Main,
-    apiKey: process.env.YOUR_API_KEY
-  })
   
 const main = async() => {
-  console.log(provider);
-  const { orders, count } = await openseaSDK.api.getOrders({
-    asset_contract_address: "0x1a92f7381b9f03921564a437210bb9396471050c",
-    token_id: "7578",
-    side: 1
+  console.log("here");
+  const { orders, count } = await seaport.api.getOrders({
+    asset_contract_address: "0x495f947276749ce646f68ac8c248420045cb7b5e",
+    token_id: "15774",
+    side: 0
   })
   
   console.log(orders);
