@@ -20,9 +20,10 @@
   },
   "homepage": "https://github.com/Cooker0910/getNFT-data-opensea#readme",
   "dependencies": {
+    "api": "^4.5.1",
     "dotenv": "^16.0.1",
     "nodemon": "^2.0.18",
-    "opensea-js": "^3.0.4",
+    "opensea-js": "^4.0.4",
     "web3": "^1.7.4"
   }
 }
