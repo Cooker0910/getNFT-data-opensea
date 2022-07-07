@@ -11,9 +11,9 @@ const main = async () => {
   })
 
   const { orders, count } = await seaport.api.getOrders({
-    assetContractAddress: "0xed5af388653567af2f388e6224dc7c4b3241c544",
-    tokenId: "1365",
-    side: "bid",
+    assetContractAddress: "0x1a92f7381b9f03921564a437210bb9396471050c",
+    tokenId: "5181",
+    side: "ask",
     limit: 5
   })
   console.log(orders, 'here');
